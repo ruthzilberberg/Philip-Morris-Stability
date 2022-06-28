@@ -1,12 +1,12 @@
-public with sharing class GenerateMobileAuthenticationCode {
+global with sharing class GenerateMobileAuthenticationCode {
     // public Account acc;
     // public Lead curLead;
-    public GenerateMobileAuthenticationCode() {
+    global GenerateMobileAuthenticationCode() {
         // this.acc = acc;
         // this.curLead = l;
     }
     @InvocableMethod
-    public void generatecode(Account acc, Lead l) {
+    global void generatecode(Account acc, Lead l) {
         String code = String.valueOf(Math.round((Math.random() * (9000) + 1000)));
         System.debug(code);
         if (acc){
